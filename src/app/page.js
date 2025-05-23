@@ -1,12 +1,16 @@
-import Header from '../components/Header'
+'use client';
+
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const HomePage = () => {
   return (
     <>
       <Header />
-      <main>
-        <h1>Welcome to Alona Shot's Portfolio</h1>
+      {/* <main>
+        <h2>hello</h2>
       </main>
+      <Footer /> */}
     </>
   )
 }

@@ -1,13 +1,10 @@
-'use client'
+'use client';
 
-import GlobalStyle from '../../styles/GlobalStyle'
-import { ThemeProvider } from 'styled-components'
+import GlobalStyle from '../styles/GlobalStyle';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../styles/theme';
 
-const theme = {
-  colors: {
-    primary: '#0070f3'
-  }
-}
+
 
 export default function RootLayout({ children }) {
   return (
