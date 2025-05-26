@@ -1,3 +1,4 @@
+
 export const theme = {
     colors: {
         primaryDark: '#0a0a0a',
@@ -27,4 +28,5 @@ export const theme = {
         desktop: '1200px',
     },
 };
+
 

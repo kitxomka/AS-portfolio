@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { theme } from '../styles/theme';
+
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -24,21 +24,15 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  box-sizing: border-box;
-  width: 100%;
 `;
 
 const Logo = styled.div`
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
   background: ${props => props.theme.gradients.purple};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
-  font-family: 'JetBrains Mono', monospace;
-  letter-spacing: -1px;
-  user-select: none;
 `;
 
 const NavMenu = styled.ul`
@@ -57,7 +51,7 @@ const NavMenu = styled.ul`
     justify-content: flex-start;
     align-items: center;
     padding-top: 2rem;
-    transition: left 0.3s ease, background 0.3s ease;
+    transition: left 0.3s ease;
   }
 `;
 
@@ -89,72 +83,36 @@ const NavLink = styled.a`
   }
 `;
 
-const MobileToggle = styled.div`
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
 
-  span {
-    width: 25px;
-    height: 3px;
-    background: ${props => props.theme.colors.textPrimary};
-    margin: 3px 0;
-    transition: 0.3s;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-    display: flex;
-  }
-`;
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 100;
-      setScrolled(isScrolled);
-
-      const sections = ['home', 'skills', 'projects', 'contact'];
-      const scrollPosition = window.scrollY + 200;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleNavClick = (sectionId) => {
-    const element = document.getElementById(sectionId);
+  const handleNavClick = (section) => {
+    const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(section);
     }
-    setIsOpen(false);
   };
 
-  const toggleMobileMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <HeaderContainer scrolled={scrolled}>
       <NavContainer>
-        <Logo>&lt; AS /&gt;</Logo>
-        <NavMenu isOpen={isOpen}>
+        <Logo>
+          &lt; SH / &gt;
+        </Logo>
+        <NavMenu>
           <li>
             <NavLink
               active={activeSection === 'home'}
@@ -188,11 +146,6 @@ const Header = () => {
             </NavLink>
           </li>
         </NavMenu>
-        <MobileToggle onClick={toggleMobileMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </MobileToggle>
       </NavContainer>
     </HeaderContainer>
   );
