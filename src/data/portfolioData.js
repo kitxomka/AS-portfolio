@@ -25,6 +25,9 @@ export const portfolioData = {
         "Bootstrap",
         "Material-UI",
         "Responsive Design",
+        "Prisma",
+        "SQLite",
+        "PostgreSQL",
         "Git & GitHub",
         "VS Code",
         "Figma",
@@ -53,7 +56,9 @@ export const portfolioData = {
             "technologies": [
                 "React",
                 "Next.js",
-                "Styled component"
+                "Styled component",
+                "Prisma",
+                "SQLite"
 
             ],
             "demoUrl": "https://demo-taskmanager.example.com",
