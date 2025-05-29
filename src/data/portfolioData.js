@@ -13,40 +13,51 @@ export const portfolioData = {
     "skills": [
         "React.js",
         "Next.js",
+        "Redux",
+        "TypeScript",
+        "Node.js",
+        "Nginx",
+        "Express",
         "JavaScript ES6+",
+        "jQuery",
         "HTML5 & CSS3",
         "Styled Components",
+        "Bootstrap",
+        "Material-UI",
         "Responsive Design",
         "Git & GitHub",
         "VS Code",
-        "Figma"
+        "Figma",
+        "Canva",
+        "Sharepoint",
+        "SPFX",
+        "Power BI",
+        "Power Automate",
+        "WordPress"
     ],
     "projects": [
         {
             "id": 1,
-            "title": "E-Commerce Platform",
-            "description": "A modern e-commerce platform built with Next.js and styled-components. Features include user authentication, shopping cart, payment integration, and admin dashboard.",
+            "title": "Space Rogue Game 🚀",
+            "description": "Text based adventure game",
             "technologies": [
-                "React",
-                "Next.js",
-                "Styled Components",
-                "Node.js"
+                "Python",
             ],
             "demoUrl": "https://demo-ecommerce.example.com",
-            "githubUrl": "https://github.com/sarahchen/ecommerce-platform"
+            "githubUrl": "https://github.com/kitxomka/python-space-rogue"
         },
         {
             "id": 2,
-            "title": "Task Management App",
-            "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+            "title": "Recipe App",
+            "description": "Recipes App",
             "technologies": [
                 "React",
-                "Redux",
-                "Socket.io",
-                "Express"
+                "Next.js",
+                "Styled component"
+
             ],
             "demoUrl": "https://demo-taskmanager.example.com",
-            "githubUrl": "https://github.com/sarahchen/task-manager"
+            "githubUrl": "https://github.com/kitxomka/recipe-app"
         },
         {
             "id": 3,
@@ -76,19 +87,6 @@ export const portfolioData = {
         },
         {
             "id": 5,
-            "title": "Portfolio Website",
-            "description": "A responsive portfolio website showcasing modern design principles with smooth animations and optimized performance.",
-            "technologies": [
-                "React",
-                "Styled Components",
-                "Framer Motion",
-                "Netlify"
-            ],
-            "demoUrl": "https://demo-portfolio.example.com",
-            "githubUrl": "https://github.com/sarahchen/portfolio"
-        },
-        {
-            "id": 6,
             "title": "Expense Tracker",
             "description": "A personal finance application with budget tracking, expense categorization, and financial goal setting with beautiful data visualization.",
             "technologies": [
@@ -99,6 +97,18 @@ export const portfolioData = {
             ],
             "demoUrl": "https://demo-expenses.example.com",
             "githubUrl": "https://github.com/sarahchen/expense-tracker"
-        }
+        },
+        {
+            "id": 6,
+            "title": "Portfolio Website",
+            "description": "A responsive portfolio website showcasing modern design principles with smooth animations and optimized performance.",
+            "technologies": [
+                "React",
+                "Next.js",
+                "Styled Components",
+            ],
+            "demoUrl": "https://demo-portfolio.example.com",
+            "githubUrl": "https://github.com/kitxomka/portfolio_next_styled"
+        },
     ]
 }
