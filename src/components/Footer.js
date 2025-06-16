@@ -106,7 +106,7 @@ const Footer = () => {
           </FooterSection_>
         </FooterContent>
         <FooterBottom>
-          <p>&copy; {new Date().getFullYear()} Alona Shot. All rights reserved. Built with ❤️ and lots of ☕</p>
+          <p>&copy; {new Date().getFullYear()} Alona Shot. All rights reserved. Built with ❤️.</p>
         </FooterBottom>
       </Container>
     </FooterSection>

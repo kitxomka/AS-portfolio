@@ -56,7 +56,7 @@ const NavMenu = styled.ul`
 `;
 
 const NavLink = styled.a`
-  color: ${props => props.active ? '#a855f7' : '#94a3b8'};
+  color: ${props => props.active ? '#C486FE' : '#94a3b8'};
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;

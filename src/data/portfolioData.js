@@ -50,18 +50,7 @@ export const portfolioData = {
         "WordPress"
     ],
     "projects": [
-        {
-            "id": uuidv4(),
-            "title": "Space Rogue Game 🚀",
-            "description": "Text-based adventure game (v2) with enhanced features and improved gameplay.",
-            "technologies": [
-                "Python",
-            ],
-            "imgSrc": I_PythonSpaceGame,
-            "demoUrl": "https://demo-ecommerce.example.com",
-            "githubUrl": "https://github.com/kitxomka/python-space-rogue",
-            "status": "In proggres"
-        },
+
         {
             "id": uuidv4(),
             "title": "Soap Shop",
@@ -75,7 +64,19 @@ export const portfolioData = {
             ],
             "imgSrc": I_SoapShop,
             "demoUrl": "https://demo-taskmanager.example.com",
-            "githubUrl": "https://github.com/kitxomka/",
+            "githubUrl": "https://github.com/kitxomka/soap-store",
+            "status": "In proggres"
+        },
+        {
+            "id": uuidv4(),
+            "title": "Space Rogue Game 🚀",
+            "description": "Text-based adventure game (v2) with enhanced features and improved gameplay.",
+            "technologies": [
+                "Python",
+            ],
+            "imgSrc": I_PythonSpaceGame,
+            "demoUrl": "https://demo-ecommerce.example.com",
+            "githubUrl": "https://github.com/kitxomka/python-space-rogue",
             "status": "In proggres"
         },
         // {
