@@ -195,51 +195,51 @@ const Memoji = styled.img`
 `;
 
 const Hero = () => {
-    const { developer } = portfolioData;
+  const { developer } = portfolioData;
 
 
-    const handleScrollToProjects = () => {
-        document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-    };
+  const handleScrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-    const handleScrollToContact = () => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    };
+  const handleScrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-    return (
-        <HeroSection id="home">
-            <Container>
-                <HeroContent>
-                    <HeroText>
-                        <h1>{developer.name}</h1>
-                        <h2>{developer.title}</h2>
-                        <p>{developer.description}</p>
-                        <HeroButtons>
-                            <Button variant="primary" onClick={handleScrollToProjects}>
-                                <i className="fas fa-rocket"></i>
-                                View My Work
-                            </Button>
-                            <Button
-                                variant="secondary"
-                                href="/cv.pdf"
-                                download="Alona_Shot_cv.pdf"
-                            >
-                                <i className="fas fa-download"></i>
-                                Download CV
-                            </Button>
-                            <Button variant="secondary" onClick={handleScrollToContact}>
-                                <i className="fas fa-envelope"></i>
-                                Get In Touch
-                            </Button>
-                        </HeroButtons>
-                    </HeroText>
-                    <HeroImage>
-                        <Memoji src="/avatar.jpg" alt="Alona Shot - Front-End Developer" />
-                    </HeroImage>
-                </HeroContent>
-            </Container>
-        </HeroSection>
-    );
+  return (
+    <HeroSection id="home">
+      <Container>
+        <HeroContent>
+          <HeroText>
+            <h1>{developer.name}</h1>
+            <h2>{developer.title}</h2>
+            <p>{developer.description}</p>
+            <HeroButtons>
+              <Button variant="primary" onClick={handleScrollToProjects}>
+                <i className="fas fa-rocket"></i>
+                View My Work
+              </Button>
+              <Button
+                variant="secondary"
+                href="/Alona_Shot_cv.pdf"
+                download="Alona_Shot_cv.pdf"
+              >
+                <i className="fas fa-download"></i>
+                Download CV
+              </Button>
+              <Button variant="secondary" onClick={handleScrollToContact}>
+                <i className="fas fa-envelope"></i>
+                Get In Touch
+              </Button>
+            </HeroButtons>
+          </HeroText>
+          <HeroImage>
+            <Memoji src="/avatar.jpg" alt="Alona Shot - Front-End Developer" />
+          </HeroImage>
+        </HeroContent>
+      </Container>
+    </HeroSection>
+  );
 };
 
 export default Hero;
